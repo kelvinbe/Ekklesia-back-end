@@ -12,7 +12,7 @@ export class User {
     @Column({type: 'varchar', nullable: true})
     town: string;
 
-    @Column({type: 'number', nullable: true})
+    @Column({type: 'int', nullable: true})
     postCode: number;
 
     @Column({type: 'varchar', nullable: false})
