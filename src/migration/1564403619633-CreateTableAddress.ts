@@ -4,7 +4,7 @@ export class CreateTableAddress1564403619633 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<any> {
         await queryRunner.createTable(new Table({
-            name: "Addresses",
+            name: "addresses",
             columns: [{
                 name: "id",
                 type: "uuid",
@@ -21,7 +21,7 @@ export class CreateTableAddress1564403619633 implements MigrationInterface {
             }, 
             {
                 name: "postCode",
-                type: "number"
+                type: "int"
             },
             {
                 name: "county",
@@ -37,7 +37,7 @@ export class CreateTableAddress1564403619633 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<any> {
-        await queryRunner.dropTable("Addresses")
+        await queryRunner.dropTable("addresses")
     }
 
 }
